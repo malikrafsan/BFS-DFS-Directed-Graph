@@ -62,3 +62,4 @@ Output
 2. Code cleanliness.
 3. Documentations. (whether in the README or comments or in the implementation)
 4. Git best practices.
+5. **DFS implementation using iterative method instead of the recursive one is preferred.**
