@@ -1,7 +1,7 @@
 # Day 4 Assignment Specification
 
 ## Description
-Implement BFS and DFS algorithm to traverse a directed graph. Create a program that accepts the following input:
+Implement BFS and DFS algorithm to traverse a directed graph. Create a program in C++ that accepts the following input:
 - The first line contains an integer *N* that represents the number of nodes in the graph. The node's name will be an integer from 0 to N-1.
 - The second line contains an integer *M* that represents the number of edges in the graph.
 - *M* lines follow - Each line contains two integer *a* and *b* that represents a directed edge from *a* to *b*.
