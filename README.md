@@ -11,16 +11,17 @@ Implement BFS and DFS algorithm to traverse a directed graph. Create a program i
 The program then outputs the traversal order.
 
 ### Example
+#### Graph
+![Graph example](graph.png)
 #### Example 1
 Input
 ```
 6
-6
+5
 0 1
 0 2
 0 3
 2 4
-2 5
 2 5
 0
 DFS
@@ -33,12 +34,11 @@ Output
 Input
 ```
 6
-6
+5
 0 1
 0 2
 0 3
 2 4
-2 5
 2 5
 2
 BFS
