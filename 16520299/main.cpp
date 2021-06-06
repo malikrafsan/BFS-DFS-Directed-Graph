@@ -1,4 +1,6 @@
 #include <iostream>
+#include <list>
+#include "graph.hpp"
 
 int main(){
     int nodes,edges,node1,node2,start;
