@@ -18,9 +18,9 @@ int main(){
     std::cin >> start;
     std::cin >> DFSorBFS;
     if (DFSorBFS == "DFS"){
-        //DFS(start)
+        //DFS(start);
     } else if (DFSorBFS == "BFS") {
-        //BFS(start)
+        graf.BFS(start);
     } else {
         //wrongInput();
     }
