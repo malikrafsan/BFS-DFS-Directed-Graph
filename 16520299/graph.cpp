@@ -15,19 +15,23 @@ void Graph::addEdge(int v, int w) {
 }
 
 void Graph::BFS(int start){
-    std::vector<bool> visited(V, false);
+    bool *visited = new bool[V];
+    for(int i = 0; i < V; i++){
+        visited[i] = false;
+    }
 
     std::list<int> queue;
 
     visited[start] = true;
     queue.push_back(start);
 
+    std::list<int>::iterator i;
     while(!queue.empty()) {
         start = queue.front();
         std::cout << start << " ";
         queue.pop_front();
 
-        for (auto i = adj[start].begin(); i != adj[start].end(); ++i) {
+        for (i = adj[start].begin(); i != adj[start].end(); ++i) {
             if (!visited[*i]) {
                 visited[*i] = true;
                 queue.push_back(*i);
