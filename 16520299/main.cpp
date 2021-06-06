@@ -9,9 +9,10 @@ int main(){
     std::cin >> nodes;
     std::cin >> edges;
 
+    Graph graf(nodes);
     for (int i=0;i<edges;i++){
         std::cin >> node1 >> node2;
-        //addEdge(node1,node2);
+        graf.addEdge(node1,node2);
     }
 
     std::cin >> start;
