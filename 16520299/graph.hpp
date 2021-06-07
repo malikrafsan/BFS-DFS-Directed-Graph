@@ -13,3 +13,5 @@ class Graph {
         void BFS(int start);
         void DFS(int start);
 };
+
+void wrongInput();

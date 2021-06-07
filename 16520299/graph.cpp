@@ -62,3 +62,7 @@ void Graph::DFS(int start) {
     }
     std::cout<<std::endl;
 }
+
+void wrongInput() {
+    std::cout << "Your input is invalid" << std::endl;
+}
