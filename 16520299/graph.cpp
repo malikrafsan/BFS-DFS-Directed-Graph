@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <stack>
 #include "graph.hpp"
 
 Graph::Graph(int V) {
@@ -41,4 +42,23 @@ void Graph::BFS(int start){
     std::cout << std::endl;
 }
 
-void Graph::DFS(int start) {}
+void Graph::DFS(int start) {
+    std::vector<bool> visited(V, false);
+ 
+    std::stack<int> stack;
+    stack.push(start);
+ 
+    while (!stack.empty()) {
+        start = stack.top();
+        stack.pop();
+        if (!visited[start])
+        {
+            std::cout << start << " ";
+            visited[start] = true;
+        }
+        for (auto i = adj[start].begin(); i != adj[start].end(); ++i)
+            if (!visited[*i])
+                stack.push(*i);
+    }
+    std::cout<<std::endl;
+}
