@@ -1,7 +1,5 @@
 # Tugas Magang Dagozilla 2021 Day 4
-
 ---
-
 ## Description
 - This program was developed to complete the Dagozilla ITB Day 4 Internship assignment. This C++ program is about implementing Breadth First Search (BFS) and Depth First Search (DFS) to traverse a directed graph. Here I implement DFS using iterative method. This program accepts following input:
 
@@ -12,16 +10,21 @@
     * The last line is the traversal algorithm that will be used (BFS/DFS).
 
 - The program then outputs the traversal order from BFS / DFS algorithm.
-
 ---
-
+## How to Run
+- Clone this repository
+- Change directory to this repository folder and to 16520299 folder
+- Open shell (bash) terminal and use this command
+    ```sh
+    g++ main.cpp class.cpp -o main
+    ./main
+    ```
+- Enjoy the program! :D
+---
 ## Author
 - Nama    : Malik Akbar Hashemi Rafsanjani
 - NIM     : 16520299
-
 ---
-
-
 ## References
 - [Dagozilla Presentation "Algorithm"](https://docs.google.com/presentation/d/1wsXSH2iqJyrLvrC66QxuG6hBCKDt7bN2pgCzdWNOQrU/edit?ts=60b904ed#slide=id.g4dfce81f19_0_45)
 - [Software Testing Help (DFS)](https://www.softwaretestinghelp.com/cpp-dfs-program-to-traverse-graph/)
