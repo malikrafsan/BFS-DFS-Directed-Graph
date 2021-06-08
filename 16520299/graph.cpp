@@ -9,8 +9,6 @@ Graph::Graph(int V) {
     adj = new std::list<int>[V];
 }
 
-Graph::~Graph() {}
-
 void Graph::addEdge(int v, int w) {
     adj[v].push_back(w);
 }
@@ -74,8 +72,4 @@ void Graph::BFS(int start) {
         if (!visited[s])
             BFSLoop(s, visited);
     std::cout << std::endl;
-}
-
-void wrongInput() {
-    std::cout << "Your input is invalid" << std::endl;
 }

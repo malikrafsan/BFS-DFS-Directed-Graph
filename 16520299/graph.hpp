@@ -8,7 +8,6 @@ class Graph {
         std::list<int> *adj;  
     public:
         Graph(int V);
-        ~Graph();
 
         void addEdge(int node1, int node2);
         void BFS(int start);
@@ -16,5 +15,3 @@ class Graph {
         void DFS(int start);
         void DFSLoop(int s, std::vector<bool> &visited);
 };
-
-void wrongInput();
