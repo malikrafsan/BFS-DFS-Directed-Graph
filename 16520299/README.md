@@ -16,7 +16,7 @@
 - Change directory to this repository folder and to 16520299 folder
 - Open shell (bash) terminal and use this command
     ```sh
-    g++ main.cpp class.cpp -o main
+    g++ main.cpp graph.cpp -o main
     ./main
     ```
 - Enjoy the program! :D
