@@ -15,33 +15,6 @@ void Graph::addEdge(int v, int w) {
     adj[v].push_back(w);
 }
 
-void Graph::BFS(int start){
-    bool *visited = new bool[V];
-    for(int i = 0; i < V; i++){
-        visited[i] = false;
-    }
-
-    std::list<int> queue;
-
-    visited[start] = true;
-    queue.push_back(start);
-
-    std::list<int>::iterator i;
-    while(!queue.empty()) {
-        start = queue.front();
-        std::cout << start << " ";
-        queue.pop_front();
-
-        for (i = adj[start].begin(); i != adj[start].end(); ++i) {
-            if (!visited[*i]) {
-                visited[*i] = true;
-                queue.push_back(*i);
-            }
-        }
-    }
-    std::cout << std::endl;
-}
-
 void Graph::DFSLoop(int s, std::vector<bool> &visited) {
     std::stack<int> stack;
     stack.push(s);
@@ -54,7 +27,6 @@ void Graph::DFSLoop(int s, std::vector<bool> &visited) {
             std::cout << s << " ";
             visited[s] = true;
         }
-
         for (auto i = adj[s].rbegin(); i != adj[s].rend(); ++i){
             if (!visited[*i]) {
                 stack.push(*i);
@@ -72,6 +44,38 @@ void Graph::DFS(int start) {
             DFSLoop(i, visited);
     std::cout << std::endl;
 }
+
+void Graph::BFSLoop(int s, std::vector<bool> &visited) {
+    std::list<int> queue;
+   
+    visited[s] = true;
+    queue.push_back(s);
+
+    std::list<int>::iterator i;
+    while(!queue.empty()) {
+        s = queue.front();
+        std::cout << s << " ";
+        queue.pop_front();
+
+        for (i = adj[s].begin(); i != adj[s].end(); ++i) {
+            if (!visited[*i]) {
+                visited[*i] = true;
+                queue.push_back(*i);
+            }
+        }
+    }
+}
+
+void Graph::BFS(int start) {
+    std::vector<bool> visited(V, false);
+
+    BFSLoop(start,visited);
+    for (int s=0; s<V; s++)
+        if (!visited[s])
+            BFSLoop(s, visited);
+    std::cout << std::endl;
+}
+
 void wrongInput() {
     std::cout << "Your input is invalid" << std::endl;
 }
