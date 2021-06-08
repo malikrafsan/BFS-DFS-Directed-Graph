@@ -42,27 +42,36 @@ void Graph::BFS(int start){
     std::cout << std::endl;
 }
 
-void Graph::DFS(int start) {
-    std::vector<bool> visited(V, false);
- 
+void Graph::DFSLoop(int s, std::vector<bool> &visited) {
     std::stack<int> stack;
-    stack.push(start);
+    stack.push(s);
  
     while (!stack.empty()) {
-        start = stack.top();
+        s = stack.top();
         stack.pop();
-        if (!visited[start])
-        {
-            std::cout << start << " ";
-            visited[start] = true;
+
+        if (!visited[s]) {
+            std::cout << s << " ";
+            visited[s] = true;
         }
-        for (auto i = adj[start].begin(); i != adj[start].end(); ++i)
-            if (!visited[*i])
+
+        for (auto i = adj[s].rbegin(); i != adj[s].rend(); ++i){
+            if (!visited[*i]) {
                 stack.push(*i);
+            }
+        }
     }
-    std::cout<<std::endl;
 }
 
+void Graph::DFS(int start) {
+    std::vector<bool> visited(V, false);
+
+    DFSLoop(start,visited);
+    for (int i = 0; i < V; i++)
+        if (!visited[i])
+            DFSLoop(i, visited);
+    std::cout << std::endl;
+}
 void wrongInput() {
     std::cout << "Your input is invalid" << std::endl;
 }

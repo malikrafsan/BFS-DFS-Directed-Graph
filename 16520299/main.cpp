@@ -21,6 +21,6 @@ int main(){
     } else if (DFSorBFS == "BFS") {
         graf.BFS(start);
     } else {
-        //wrongInput();
+        wrongInput();
     }
 }

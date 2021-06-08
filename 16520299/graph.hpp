@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <vector>
 
 class Graph {
     private:
@@ -12,6 +13,7 @@ class Graph {
         void addEdge(int node1, int node2);
         void BFS(int start);
         void DFS(int start);
+        void DFSLoop(int s, std::vector<bool> &visited);
 };
 
 void wrongInput();
