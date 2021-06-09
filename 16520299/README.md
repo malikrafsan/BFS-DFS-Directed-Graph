@@ -21,6 +21,17 @@
     ```
 - Enjoy the program! :D
 ---
+## Program's Eminence
+- Able to handle disconnected nodes
+- Able to handle circular graph
+- Using adjacency list to minimize space complexity
+- Using DFS iterative algorithm to minimize space complexity
+---
+## Assumption
+- Input edges are sorted, 0 1,0 2,0 3,1 5,1 4, will give different result from 0 1,0 2,0 3,1 4,1 5
+- Node numbering starts from 0 to the (number of nodes) - 1, no node has a number outside that range
+- Disconnected nodes are traversed too (0 1, 0 2, 3 3) -> (0 1 2 3)
+---
 ## Author
 - Nama    : Malik Akbar Hashemi Rafsanjani
 - NIM     : 16520299
@@ -29,3 +40,5 @@
 - [Dagozilla Presentation "Algorithm"](https://docs.google.com/presentation/d/1wsXSH2iqJyrLvrC66QxuG6hBCKDt7bN2pgCzdWNOQrU/edit?ts=60b904ed#slide=id.g4dfce81f19_0_45)
 - [Software Testing Help (DFS)](https://www.softwaretestinghelp.com/cpp-dfs-program-to-traverse-graph/)
 - [Programiz (BFS)](https://www.programiz.com/dsa/graph-bfs)
+- [Geeksforgeeks Iterative DFS](https://www.geeksforgeeks.org/iterative-depth-first-traversal/)
+- [Geeksforgeeks BFS](https://www.geeksforgeeks.org/bfs-using-stl-competitive-coding/)
