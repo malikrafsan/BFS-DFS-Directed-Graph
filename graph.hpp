@@ -18,7 +18,7 @@ class Graph {
         // I.S. graph object, v and w are defined
         // F.S. w is added to v's adjacency list
 
-        void BFS(int start);
+        void BFS(bool allNode);
         // I.S. graph object and start are defined
         // F.S. every node in the graph has been traversed using BFS method
 
@@ -26,7 +26,7 @@ class Graph {
         // I.S. graph object, s, and visited has been defined
         // F.S. every node that connected to s has been traversed using BFS method
 
-        void DFS(int start);
+        void DFS(bool allNode);
         // I.S. graph object and start are defined
         // F.S. every node in the graph has been traversed using DFS method
 
@@ -34,3 +34,7 @@ class Graph {
         // I.S. graph object, s and visited are defined
         // F.S. every node that connected to s has been traversed using DFS method
 };
+
+void wrongInput();
+// I.S. any states
+// F.S. invalid input warning message is displayed on the screen

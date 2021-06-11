@@ -16,18 +16,24 @@ void Graph::addEdge(int v, int w) {
     adj[v].push_back(w);
 }
 
-void Graph::BFS(int start) {
+void Graph::BFS(bool allNode) {
     // DICTIONARY
     std::vector<bool> visited(V, false);
 
     // ALGORITHM
-    // Traverse graph from starting node first
-    BFSLoop(start,visited);
-    for (int s=0; s<V; s++) {
-        if (!visited[s]){
-            // Traverse graph start from node that hasn't been traversed
-            BFSLoop(s, visited);
+    // Traverse all nodes
+    if (allNode) {
+        for (int s=0; s<V; s++) {
+            if (!visited[s]){
+                // Traverse graph start from node that hasn't been traversed
+                BFSLoop(s, visited);
+            }
         }
+    } // Traverse nodes from a starting node 
+    else {
+        int start;
+        std::cout << "Input starting node: "; std::cin >> start;
+        BFSLoop(start,visited);
     }
     std::cout << std::endl;
 }
@@ -61,20 +67,24 @@ void Graph::BFSLoop(int s, std::vector<bool> &visited) {
     }
 }
 
-void Graph::DFS(int start) {
+void Graph::DFS(bool allNode) {
     // DICTIONARY
     std::vector<bool> visited(V, false);
 
     // ALGORITHM
-    // Traverse graph from starting node first
-    DFSLoop(start,visited);
-
-    // Check whether every node has been traversed
-    for (int s = 0; s < V; s++) {
-        if (!visited[s]){
-            // Traverse graph start from node that hasn't been traversed 
-            DFSLoop(s, visited);
+    // Traverse all nodes case
+    if (allNode) {
+        for (int s = 0; s < V; s++) {
+            if (!visited[s]){
+                // Traverse graph start from node that hasn't been traversed 
+                DFSLoop(s, visited);
+            }
         }
+    } // Traverse nodes from a starting node case 
+    else {
+        int start;
+        std::cout << "Input starting node: "; std::cin >> start;
+        DFSLoop(start,visited);      
     }
     std::cout << std::endl;
 }
@@ -106,4 +116,8 @@ void Graph::DFSLoop(int s, std::vector<bool> &visited) {
             }
         }
     }
+}
+
+void wrongInput() {
+    std::cout << "Your input is invalid" << std::endl;
 }
