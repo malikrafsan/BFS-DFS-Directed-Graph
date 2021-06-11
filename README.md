@@ -1,20 +1,16 @@
-# Tugas Magang Dagozilla 2021 Day 4
+# BFS and DFS Algorithm in Directed Graph
 ---
 ## Description
-- This program was developed to complete the Dagozilla ITB Day 4 Internship assignment. This C++ program is about implementing Breadth First Search (BFS) and Depth First Search (DFS) to traverse a directed graph. Here I implement DFS using iterative method. This program accepts following input:
-
-    * The first line contains an integer N that represents the number of nodes in the graph. The node's name will be an integer from 0 to N-1.
-    * The second line contains an integer M that represents the number of edges in the graph.
-    * M lines follow - Each line contains two integer a and b that represents a directed edge from a to b.
-    * The next line contains an integer that represents the starting node.
-    * The last line is the traversal algorithm that will be used (BFS/DFS).
-
-- The program then outputs the traversal order from BFS / DFS algorithm.
+- This C++ program is about implementing Breadth First Search (BFS) and Depth First Search (DFS) to traverse a directed graph. Here I implement DFS using iterative method. This program can perform traverse all nodes in a graph and traverse graph from starting node. The program then outputs the traversal order from BFS / DFS algorithm. This program also uses command line interface (CLI) to ask input and interact with the user.
 ---
 ## How to Run
-- Clone this repository
-- Change directory to this repository folder and to 16520299 folder
-- Open shell (bash) terminal and use this command
+- Clone this repository and Change directory to this repository folder
+    ```sh
+    git clone https://github.com/malikrafsan/BFS-DFS-Directed-Graph.git
+
+    cd BFS-DFS-Directed-Graph
+    ```
+- Run C++ program
     ```sh
     g++ main.cpp graph.cpp -o main
     ./main
@@ -29,8 +25,7 @@
 - Using DFS iterative algorithm to minimize space complexity
 ---
 ## Author
-- Nama    : Malik Akbar Hashemi Rafsanjani
-- NIM     : 16520299
+- Malik Akbar Hashemi Rafsanjani
 ---
 ## References
 - [Dagozilla Presentation "Algorithm"](https://docs.google.com/presentation/d/1wsXSH2iqJyrLvrC66QxuG6hBCKDt7bN2pgCzdWNOQrU/edit?ts=60b904ed#slide=id.g4dfce81f19_0_45)
