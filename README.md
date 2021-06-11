@@ -1,10 +1,10 @@
 # BFS and DFS Algorithm in Directed Graph
 ---
 ## Description
-- This C++ program is about implementing Breadth First Search (BFS) and Depth First Search (DFS) to traverse a directed graph. Here I implement DFS using iterative method. This program can perform traverse all nodes in a graph and traverse graph from starting node. The program then outputs the traversal order from BFS / DFS algorithm. This program also uses command line interface (CLI) to ask input and interact with the user.
+- This C++ program is about implementing Breadth First Search (BFS) and Depth First Search (DFS) to traverse a directed graph. Here I implement both BFS and DFS using adjacency list, also DFS using iterative method. This program can perform traverse all nodes in a graph and traverse graph from starting node. The program then outputs the traversal order from BFS / DFS algorithm. This program also uses command line interface (CLI) to ask input and interact with the user.
 ---
 ## How to Run
-- Clone this repository and Change directory to this repository folder
+- Clone this repository and change directory to this repository folder
     ```sh
     git clone https://github.com/malikrafsan/BFS-DFS-Directed-Graph.git
 
